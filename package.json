@@ -2,6 +2,7 @@
   "dependencies": {
     "gulp": "3.9.1",
     "appium-gulp-plugins": "2.2.0",
+    "appium-uiautomator2-driver": "rajdeepv/appium-uiautomator2-driver#skip_sign",
     "appium": "1.6.5"
   },
   "scripts": {
