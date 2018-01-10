@@ -1,0 +1,43 @@
+GEM
+  remote: https://www.rubygems.org/
+  specs:
+    appium_lib (9.8.2)
+      appium_lib_core (~> 1.2.3)
+      nokogiri (~> 1.6, >= 1.6.6)
+      tomlrb (~> 1.1)
+    appium_lib_core (1.2.4)
+      json (>= 1.8)
+      selenium-webdriver (~> 3.5)
+    childprocess (0.8.0)
+      ffi (~> 1.0, >= 1.0.11)
+    coderay (1.1.1)
+    ffi (1.9.18)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
+    json (2.1.0)
+    method_source (0.8.2)
+    mini_portile2 (2.3.0)
+    multi_xml (0.6.0)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rubyzip (1.2.1)
+    selenium-webdriver (3.8.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
+    slop (3.6.0)
+    tomlrb (1.2.6)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appium_lib (= 9.8.2)
+  httparty
+  pry
+
+BUNDLED WITH
+   1.16.1
