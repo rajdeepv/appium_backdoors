@@ -147,7 +147,7 @@
         "appium-mac-driver": "1.0.2",
         "appium-selendroid-driver": "1.6.2",
         "appium-support": "2.8.2",
-        "appium-uiautomator2-driver": "0.11.0",
+        "appium-uiautomator2-driver": "github:rajdeepv/appium-uiautomator2-driver#5d44c56c7b34b2d12afed1e633bdc446c7325f8a",
         "appium-windows-driver": "0.5.0",
         "appium-xcuitest-driver": "2.30.0",
         "appium-youiengine-driver": "1.0.11",
@@ -928,9 +928,7 @@
           }
         },
         "appium-uiautomator2-driver": {
-          "version": "0.11.0",
-          "resolved": "github:rajdeepv/appium-uiautomator2-driver#5d44c56c7b34b2d12afed1e633bdc446c7325f8a",
-          "integrity": "sha1-G110TD13gkJ0QEs9OgdGALGCX3c=",
+          "version": "github:rajdeepv/appium-uiautomator2-driver#5d44c56c7b34b2d12afed1e633bdc446c7325f8a",
           "requires": {
             "adbkit": "2.9.2",
             "appium-adb": "2.23.0",
