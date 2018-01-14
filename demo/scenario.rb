@@ -12,8 +12,8 @@ APPIUM_FORWARDED_PORT = 4567
 caps={
     platformName: 'Android',
     deviceName: connected_devices.first,
-    app: '~/AndroidStudioProjects/Messanger/app/build/outputs/apk/debug/app-debug.apk',
-    appWaitActivity: '.CreateMessageActivity',
+    app: '/Users/rajdeepvarma/AndroidStudioProjects/Messanger/app/build/outputs/apk/debug/app-debug.apk',
+    appWaitActivity: '*',
     automationName: 'uiautomator2',
     noSign: true,
     newCommandTimeout: 0,
@@ -26,11 +26,18 @@ caps={
 Appium::Driver.new(caps: caps)
 $driver.start_driver
 
-def backdoor(method_name,args = nil)
-  url = "http://localhost:#{APPIUM_FORWARDED_PORT}/wd/hub/session/:sessionId/backdoor"
-  body = { 'method_name' => method_name,args: args }.to_json
-  response = HTTParty.post(url, body: body)
-  JSON.parse(response.body)['value']
-end
+def backdoor(*args)
+    url = "http://localhost:#{APPIUM_FORWARDED_PORT}/wd/hub/session/:sessionId/backdoor"
+    body = { 'methods' => args }.to_json
+    uri = URI(url)
+    req = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')
+    req.body = body
+
+    response = Net::HTTP.start(uri.hostname, uri.port) do |http|
+      http.request(req)
+    end
+
+    JSON.parse(response.body)['value']
+  end
 
 binding.pry
