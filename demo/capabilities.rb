@@ -10,7 +10,7 @@ def android_caps
   {
       platformName: 'Android',
       deviceName: connected_devices.first,
-      app: '/Users/rajdeepvarma/AndroidStudioProjects/Messanger/app/build/outputs/apk/debug/app-debug.apk',
+      app: 'app-debug.apk',
       appWaitActivity: '*',
       automationName: 'uiautomator2',
       noSign: true,
