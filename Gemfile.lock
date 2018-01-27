@@ -1,19 +1,15 @@
-PATH
-  remote: /Users/rajdeepvarma/projects/appium_instrumenter
-  specs:
-    appium_instrumenter (0.1.0)
-      escape (~> 0.0.4)
-      luffa
-      rubyzip (~> 1.1)
-
 GEM
   remote: https://www.rubygems.org/
   specs:
+    appium_instrumenter (0.1.1)
+      escape (~> 0.0.4)
+      luffa
+      rubyzip (~> 1.1)
     appium_lib (9.8.2)
       appium_lib_core (~> 1.2.3)
       nokogiri (~> 1.6, >= 1.6.6)
       tomlrb (~> 1.1)
-    appium_lib_core (1.2.5)
+    appium_lib_core (1.2.7)
       json (>= 1.8)
       selenium-webdriver (~> 3.5)
     awesome_print (1.8.0)
@@ -50,7 +46,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  appium_instrumenter!
+  appium_instrumenter
   appium_lib (= 9.8.2)
   httparty
   pry
