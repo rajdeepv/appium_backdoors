@@ -12,6 +12,7 @@ reinstall_apps
 
 binding.pry
 backdoor({name:"raiseToastWithMessage",args:["Welcome to Badoo Automation meetup"]})
+backdoor({name:"showNotification",args:["Welcome to Badoo Automation meetup"]})
 backdoor({name:"messageView"},{name:"getTextSize"})
 backdoor({name:"messageView"},{name:"getTypeface"},{name:"isItalic"})
 backdoor({name:"messageView"},{name:"getTypeface"},{name:"isBold"})
