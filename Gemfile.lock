@@ -1,7 +1,7 @@
 GEM
   remote: https://www.rubygems.org/
   specs:
-    appium_instrumenter (0.1.1)
+    appium_instrumenter (0.1.2)
       escape (~> 0.0.4)
       luffa
       rubyzip (~> 1.1)
@@ -46,7 +46,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  appium_instrumenter
+  appium_instrumenter (= 0.1.2)
   appium_lib (= 9.8.2)
   httparty
   pry
