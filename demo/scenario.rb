@@ -17,3 +17,6 @@ backdoor({name:"messageView"},{name:"getTextSize"})
 backdoor({name:"messageView"},{name:"getTypeface"},{name:"isItalic"})
 backdoor({name:"messageView"},{name:"getTypeface"},{name:"isBold"})
 backdoor({name:"messageView"},{name:"setError",args:["Yahoo"]})
+
+@driver.open_notifications
+@driver.find_element({xpath: '//*[contains(@text, "Welcome")]'})
