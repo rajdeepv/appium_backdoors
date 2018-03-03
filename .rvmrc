@@ -1,1 +1,1 @@
-rvm use --create ruby-2.3.1@appium_backdoors_demo
+rvm use --create ruby-2.4.1@appium_backdoors_demo
