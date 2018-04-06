@@ -7,12 +7,48 @@ require_relative 'helpers'
 reinstall_apps
 
 @driver = Appium::Driver.new(caps: android_caps)
+
 @driver.start_driver
 
 
 binding.pry
-backdoor({name:"raiseToastWithMessage",args:["Welcome to Code Fest"]})
-backdoor({name:"showNotification",args:["Welcome to Code Fest"]})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+backdoor({name:"raiseToastWithMessage",args:["Love Appium"]})
 backdoor({name:"messageView"},{name:"getTextSize"})
 backdoor({name:"messageView"},{name:"getTypeface"},{name:"isItalic"})
 backdoor({name:"messageView"},{name:"getTypeface"},{name:"isBold"})

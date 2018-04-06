@@ -25,10 +25,6 @@ public class CreateMessageActivity extends AppCompatActivity {
         return (EditText)findViewById(R.id.message);
     }
 
-    public void showNotification(String message){
-        NotificationUtils.showNotification(this,message);
-    }
-
 
     public void onSendMessage(View view) {
         EditText editText = (EditText) findViewById(R.id.message);
