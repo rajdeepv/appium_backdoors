@@ -48,7 +48,7 @@ binding.pry
 
 
 
-backdoor({name:"raiseToastWithMessage",args:["Love Appium"]})
+backdoor({name:"raiseToast",args:["Love Appium"]})
 backdoor({name:"messageView"},{name:"getTextSize"})
 backdoor({name:"messageView"},{name:"getTypeface"},{name:"isItalic"})
 backdoor({name:"messageView"},{name:"getTypeface"},{name:"isBold"})

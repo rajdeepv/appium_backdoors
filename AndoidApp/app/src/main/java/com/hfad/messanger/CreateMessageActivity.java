@@ -17,7 +17,7 @@ public class CreateMessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_message);
     }
 
-    public void raiseToastWithMessage(String message){
+    public void raiseToast(String message){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
