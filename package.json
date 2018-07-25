@@ -1,11 +1,10 @@
 {
   "dependencies": {
-    "gulp": "3.9.1",
-    "appium-gulp-plugins": "2.2.0",
-    "appium": "1.6.5"
+    "appium": "1.8.1"
   },
   "scripts": {
-    "start": "./npm-start.sh"
+    "start": "./scripts/npm-start.sh",
+    "postinstall": "./uiautomator2_install.sh"
   },
   "private": true
 }
