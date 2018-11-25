@@ -3,7 +3,7 @@
     "appium": "1.8.1"
   },
   "scripts": {
-    "start": "./scripts/npm-start.sh",
+    "start": "./npm-start.sh",
     "postinstall": "./uiautomator2_install.sh"
   },
   "private": true
