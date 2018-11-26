@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "appium": "1.8.1"
+    "appium": "1.10.0-beta.4",
+    "appium-espresso-driver": "1.2.3"
   },
   "scripts": {
-    "start": "./npm-start.sh",
-    "postinstall": "./uiautomator2_install.sh"
+    "start": "./npm-start.sh"
   },
   "private": true
 }

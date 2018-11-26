@@ -23,6 +23,21 @@ def android_caps
 
 end
 
+def android_caps_espresso
+  {
+      platformName: 'Android',
+      deviceName: connected_devices.first,
+      app: 'app-debug.apk',
+      appWaitActivity: '*',
+      automationName: 'espresso',
+      newCommandTimeout: 0,
+      skipUnlock: true,
+      noReset: true,
+      fullReset: false,
+      systemPort: APPIUM_FORWARDED_PORT
+  }
+end
+
 def ios_caps
   {
       platformName: 'ios',

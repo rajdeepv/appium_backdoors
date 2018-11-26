@@ -1,8 +1,6 @@
 def reinstall_apps
   p `adb uninstall com.hfad.messanger`
   p `adb uninstall io.appium.uiautomator2.server; adb uninstall io.appium.uiautomator2.server.test`
-  `adb install test_servers/appium-uiautomator2-server-debug-androidTest.apk`
-  `adb install test_servers/appium-uiautomator2-server-v0.3.0.apk`
 end
 
 def backdoor(*args)

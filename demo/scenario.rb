@@ -6,7 +6,7 @@ require_relative 'helpers'
 
 reinstall_apps
 
-@driver = Appium::Driver.new(caps: android_caps)
+@driver = Appium::Driver.new(caps: android_caps_espresso)
 
 @driver.start_driver
 
