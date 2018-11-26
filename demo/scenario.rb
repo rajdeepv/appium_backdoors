@@ -13,48 +13,7 @@ reinstall_apps
 
 binding.pry
 
-@driver.execute_script("mobile: swipe", {"element" => "af1cb86c-23c7-4d39-a1d5-351f599419b8", "direction" => "down", "dsda" => "dsasa"})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-backdoor({name:"raiseToast",args:["Love Appium"]})
-backdoor({name:"messageView"},{name:"getTextSize"})
-backdoor({name:"messageView"},{name:"getTypeface"},{name:"isItalic"})
-backdoor({name:"messageView"},{name:"getTypeface"},{name:"isBold"})
-backdoor({name:"messageView"},{name:"setError",args:["Yahoo"]})
-
-@driver.open_notifications
-@driver.find_element({xpath: '//*[contains(@text, "Welcome")]'})
+@driver.execute_script("mobile: backdoor",[{name:"messageView"},{name:"getTextSize"}])
+@driver.execute_script("mobile: backdoor",[{name:"raiseToast",args:["Love Appium"]}])
+@driver.execute_script("mobile: backdoor",[{name:"messageView"},{name:"getTypeface"},{name:"isItalic"}])
+@driver.execute_script("mobile: backdoor",[{name:"messageView"},{name:"setError",args:["Lol"]}])
