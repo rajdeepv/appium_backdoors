@@ -13,6 +13,8 @@ reinstall_apps
 
 binding.pry
 
+@driver.execute_script("mobile: swipe", {"element" => "af1cb86c-23c7-4d39-a1d5-351f599419b8", "direction" => "down", "dsda" => "dsasa"})
+
 
 
 
