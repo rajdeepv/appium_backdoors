@@ -32,8 +32,7 @@ def android_caps_espresso
       automationName: 'espresso',
       newCommandTimeout: 0,
       skipUnlock: true,
-      noReset: true,
-      fullReset: false,
+      fullReset: true,
       systemPort: APPIUM_FORWARDED_PORT
   }
 end
