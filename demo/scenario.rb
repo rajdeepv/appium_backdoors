@@ -10,7 +10,7 @@ reinstall_apps
 
 @driver.start_driver
 
-methods = {
+method1 = {
     target: 'activity',
     methods:
         [
@@ -21,7 +21,7 @@ methods = {
         ]
 }
 
-methods = {
+method2 = {
     target: 'activity',
     methods:
         [
@@ -42,7 +42,7 @@ methods = {
 
 
 
-methods = {
+method3 = {
     target: 'activity',
     methods:
         [
