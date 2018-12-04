@@ -60,4 +60,12 @@
         android:layout_marginTop="17dp"
         android:onClick="onIncreaseSize"
         android:text="@string/increase_size" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="143dp" />
 </RelativeLayout>

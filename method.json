@@ -1,0 +1,21 @@
+{
+  "target": "application",
+  "methods": [
+    {
+      "name": "firstMethod",
+      "args": [
+        {
+          "type": "int.class",
+          "value": 2
+        },
+        {
+          "type": "String.class",
+          "value": "bla"
+        }
+      ]
+    },
+    {
+      "name": "secondMethod"
+    }
+  ]
+}
