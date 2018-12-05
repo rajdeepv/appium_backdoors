@@ -56,9 +56,6 @@ method3 = {
 }
 
 
-binding.pry
-
 @driver.execute_script("mobile: backdoor", methods)
-@driver.execute_script("mobile: backdoor", [{name: "raiseToast", args: ["Love Appium"]}])
-@driver.execute_script("mobile: backdoor", [{name: "messageView"}, {name: "getTypeface"}, {name: "isItalic"}])
-@driver.execute_script("mobile: backdoor", [{name: "messageView"}, {name: "setError", args: ["Lol"]}])
+id = @driver.find_element({id:'id/message'}).instance_variable_get('@id')
+@driver.execute_script("mobile: backdoor", {:target=>"element",elementId:id, :methods=>[{:name=>"getTextSize"}]})
