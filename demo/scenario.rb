@@ -55,6 +55,7 @@ method3 = {
         ]
 }
 
+require 'pry'; binding.pry
 
 @driver.execute_script("mobile: backdoor", methods)
 id = @driver.find_element({id:'id/message'}).instance_variable_get('@id')
