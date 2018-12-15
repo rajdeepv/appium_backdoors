@@ -20,14 +20,3 @@ def android_caps_espresso
       forceEspressoRebuild: true
   }
 end
-
-def ios_caps
-  {
-      platformName: 'ios',
-      deviceName: "iPhone 6",
-      app: 'TTL.app',
-      platformVersion: "11.2",
-      automationName: "XCUITest",
-      newCommandTimeout: 600,
-  }
-end
