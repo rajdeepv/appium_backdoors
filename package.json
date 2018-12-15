@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "appium": "1.10.0-beta.4",
-    "appium-espresso-driver": "1.2.3"
+    "appium": "1.10.0-beta.4"
   },
   "scripts": {
     "start": "./npm-start.sh"
