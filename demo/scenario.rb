@@ -1,6 +1,5 @@
 require 'pry'
 require 'appium_lib'
-require 'httparty'
 require_relative 'capabilities'
 require_relative 'helpers'
 
@@ -32,9 +31,9 @@ method2 = {
                 name: "append",
                 args:
                     [
-                        {value: "Lol", type: 'java.lang.CharSequence'},
-                        {value: 1, type: 'int'},
-                        {value: 2, type: 'int'}
+                        {value: " Appium", type: 'java.lang.CharSequence'},
+                        {value: 0, type: 'int'},
+                        {value: 7, type: 'int'}
                     ]
             }
         ]
@@ -57,6 +56,11 @@ method3 = {
 
 require 'pry'; binding.pry
 
-@driver.execute_script("mobile: backdoor", methods)
-id = @driver.find_element({id:'id/message'}).instance_variable_get('@id')
-@driver.execute_script("mobile: backdoor", {:target=>"element",elementId:id, :methods=>[{:name=>"getTextSize"}]})
+@driver.execute_script("mobile: backdoor", method1)
+@driver.execute_script("mobile: backdoor", method2)
+@driver.execute_script("mobile: backdoor", method3)
+
+id = @driver.find_element({id:'seekBar'}).ref
+@driver.execute_script("mobile: backdoor", {:target=>"element",elementId:id, :methods=>[{:name=>"getProgress"}]})
+
+flash_element({id:'seekBar'})

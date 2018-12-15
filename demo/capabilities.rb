@@ -6,23 +6,6 @@ end
 
 APPIUM_FORWARDED_PORT = 4567
 
-def android_caps
-  {
-      platformName: 'Android',
-      deviceName: connected_devices.first,
-      app: 'app-debug.apk',
-      appWaitActivity: '*',
-      automationName: 'uiautomator2',
-      noSign: true,
-      newCommandTimeout: 0,
-      skipUnlock: true,
-      noReset: true,
-      fullReset: false,
-      systemPort: APPIUM_FORWARDED_PORT
-  }
-
-end
-
 def android_caps_espresso
   {
       platformName: 'Android',
@@ -33,7 +16,8 @@ def android_caps_espresso
       newCommandTimeout: 0,
       skipUnlock: true,
       fullReset: true,
-      systemPort: APPIUM_FORWARDED_PORT
+      systemPort: APPIUM_FORWARDED_PORT,
+      forceEspressoRebuild: true
   }
 end
 

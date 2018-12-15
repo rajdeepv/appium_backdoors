@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -38,6 +40,11 @@ public class CreateMessageActivity extends AppCompatActivity {
     public void onBold(View view) {
         EditText editText = (EditText) findViewById(R.id.message);
         editText.setTypeface(null, Typeface.BOLD);
+        Animation animation = new AlphaAnimation(1, 0);
+        animation.setRepeatMode(Animation.REVERSE);
+        animation.setDuration(300);
+        animation.setRepeatCount(30);
+        view.startAnimation(animation);
     }
 
     public void onItalic(View view) {
