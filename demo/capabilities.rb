@@ -10,7 +10,7 @@ def android_caps_espresso
   {
       platformName: 'Android',
       deviceName: connected_devices.first,
-      app: 'app-debug.apk',
+      app: 'app-release.apk',
       appWaitActivity: '*',
       automationName: 'espresso',
       newCommandTimeout: 0,

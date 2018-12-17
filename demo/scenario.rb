@@ -10,12 +10,11 @@ reinstall_apps
 @driver.start_driver
 
 method1 = {
-    target: 'activity',
+    target: 'application',
     methods:
         [
             {
-                name: "raiseToast",
-                args: [{value: "Love Appium", type: 'java.lang.String'}]
+                name: "raiseToast"
             }
         ]
 }
