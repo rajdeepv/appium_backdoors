@@ -49,8 +49,8 @@
         android:layout_alignEnd="@+id/bold"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="-12dp"
-        android:onClick="onItalic"
-        android:text="@string/italic" />
+        android:onClick="setError"
+        android:text="@string/set_error" />
 
     <Button
         android:id="@+id/increase_size"

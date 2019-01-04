@@ -2,7 +2,7 @@
     <string name="app_name">Demo</string>
     <string name="send_message">Send Message</string>
     <string name="bold">Make Bold</string>
-    <string name="italic">Make Italic</string>
+    <string name="set_error">Error</string>
     <string name="increase_size">Increase Size</string>
     <string name="link_text">If you want to know more about the appium element extensions and backdoors please follow me <a href="https://twitter.com/varmarajdeep">here</a> and ask your questions</string>
     <string name="quantity">Lol</string>

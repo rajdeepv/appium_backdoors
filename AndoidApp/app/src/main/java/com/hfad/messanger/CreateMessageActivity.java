@@ -46,10 +46,9 @@ public class CreateMessageActivity extends AppCompatActivity {
         editText.setTypeface(null, Typeface.BOLD);
     }
 
-    public void onItalic(View view) {
+    public void setError(View view) {
         EditText editText = (EditText) findViewById(R.id.message);
-        editText.setTypeface(null, Typeface.ITALIC);
-        editText.setHint("My conditional hint");
+        editText.setError("What!!");
     }
 
     public void onIncreaseSize(View view) {
