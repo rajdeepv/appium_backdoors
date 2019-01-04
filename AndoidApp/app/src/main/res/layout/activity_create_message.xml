@@ -4,10 +4,10 @@
     android:id="@+id/activity_create_message"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.hfad.messanger.CreateMessageActivity">
 
     <Button
@@ -29,25 +29,26 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="SeConf INDIA!" />
+        android:text="Welcome to Appium Conf" />
 
     <Button
         android:id="@+id/bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/message"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp"
+        android:layout_alignStart="@+id/send_button"
+        android:layout_marginTop="11dp"
         android:onClick="onBold"
         android:text="@string/bold" />
 
     <Button
         android:id="@+id/italic"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/bold"
         android:layout_below="@+id/bold"
-        android:layout_marginTop="33dp"
+        android:layout_alignEnd="@+id/bold"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="-12dp"
         android:onClick="onItalic"
         android:text="@string/italic" />
 
@@ -55,17 +56,31 @@
         android:id="@+id/increase_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/italic"
         android:layout_below="@+id/italic"
-        android:layout_marginTop="17dp"
+        android:layout_alignStart="@+id/italic"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="11dp"
         android:onClick="onIncreaseSize"
         android:text="@string/increase_size" />
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="143dp"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/italic"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-29dp"
+        android:layout_marginBottom="218dp" />
+
+    <TextView
+        android:id="@+id/textWithLink"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="143dp" />
+        android:layout_gravity="center"
+        android:layout_marginBottom="119dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="@string/link_text" />
 </RelativeLayout>
