@@ -64,3 +64,20 @@ id = @driver.find_element({id:'seekBar'}).ref
 @driver.execute_script("mobile: backdoor", {:target=>"element",elementId:id, :methods=>[{:name=>"getProgress"}]})
 
 flash_element({id:'seekBar'})
+
+id = @driver.find_element({id:'message'}).ref
+hor = @driver.execute_script("mobile: backdoor", {:target=>"element",elementId:id, :methods=>[{:name=>"getLayout"}, {:name=>"getPrimaryHorizontal", args:[{type:"int", value:0}]}]})
+line = @driver.execute_script("mobile: backdoor", {:target=>"element",elementId:id, :methods=>[{:name=>"getLayout"}, {:name=>"getLineForOffset", args:[{type:"int", value:0}]}]})
+ver = @driver.execute_script("mobile: backdoor", {:target=>"element",elementId:id, :methods=>[{:name=>"getLayout"}, {:name=>"getLineBaseline", args:[{type:"int", value:line}]}]})
+
+def w3c_touch_point(hor,ver)
+  selenium_driver = @driver.driver
+  f1 = selenium_driver.action.add_pointer_input(:touch, 'finger1')
+  f1.create_pointer_move(duration: 0, x: hor, y: ver, origin: ::Selenium::WebDriver::Interactions::PointerMove::VIEWPORT)
+  f1.create_pointer_down(:left)
+  f1.create_pause(0.2)
+  f1.create_pointer_up(:left)
+  selenium_driver.perform_actions [f1]
+end
+
+w3c_touch_point(hor,ver)
