@@ -3,4 +3,4 @@ require 'appium_lib'
 require_relative 'capabilities'
 require_relative 'helpers'
 
-reinstall_apps
+uninstall_apps
