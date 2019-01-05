@@ -1,6 +1,6 @@
 require_relative 'utils/env'
 
-@driver = Appium::Driver.new(caps: android_caps_espresso)
+@driver = Appium::Driver.new(caps: android_caps_espresso.merge(app: 'apidemo.apk'))
 @driver.start_driver
 
 def w3c_touch_point(hor,ver)
@@ -13,8 +13,8 @@ def w3c_touch_point(hor,ver)
   selenium_driver.perform_actions [f1]
 end
 
-def tap_subtext_in_text(subtext)
-  link_element = @driver.find_element({id: 'textWithLink'})
+def tap_subtext_in_text(subtext, id)
+  link_element = @driver.find_element({id: id})
   link_element_text = link_element.text
   index_of_hyperlink = link_element_text.index(subtext) + subtext.size/2
   top_x = link_element.location.x
@@ -27,5 +27,21 @@ def tap_subtext_in_text(subtext)
   w3c_touch_point(hor + top_x + left_padding, ver + top_y)
 end
 
+list_view = @driver.find_element({id:'android:id/list'})
+backdoor_scroll_list_view = {:target => "element",
+                             elementId: list_view.ref,
+                             :methods => [
+                                 {name: "scrollListBy",
+                                  args: [
+                                      {type: 'int', value: 200},
+                                  ]
+                                 }
+                             ]
+}
+
+@driver.execute_script("mobile: backdoor", backdoor_scroll_list_view)
+
+@driver.find_element(xpath_by_text("Text")).click
+@driver.find_element(xpath_by_text("Linkify")).click
+tap_subtext_in_text('415','text1')
 require 'pry'; binding.pry
-tap_subtext_in_text("you")
