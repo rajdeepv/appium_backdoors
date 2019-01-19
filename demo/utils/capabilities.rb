@@ -4,8 +4,6 @@ def connected_devices
   lines[start_index..-1].collect {|l| l.split("\t").first}
 end
 
-APPIUM_FORWARDED_PORT = 4567
-
 def android_caps_espresso
   {
       platformName: 'Android',
@@ -15,8 +13,7 @@ def android_caps_espresso
       automationName: 'espresso',
       newCommandTimeout: 0,
       skipUnlock: true,
-      fullReset: true,
-      systemPort: APPIUM_FORWARDED_PORT,
-      forceEspressoRebuild: true
+      fullReset: false,
+      forceEspressoRebuild: true,
   }
 end
