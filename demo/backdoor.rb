@@ -32,8 +32,6 @@ method2 = {
         ]
 }
 
-
-
 method3 = {
     target: 'activity',
     methods:

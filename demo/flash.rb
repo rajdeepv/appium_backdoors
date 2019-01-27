@@ -6,7 +6,7 @@ require_relative 'utils/env'
 def flash_element(e)
   e = @driver.find_element(e)
   id = e.ref
-  @driver.execute_script("mobile: flashElement",{element:id})
+  @driver.execute_script("mobile: flashElement", {element: id})
 end
 
-flash_element({id:'seekBar'})
+flash_element({id: 'seekBar'})
