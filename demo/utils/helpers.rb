@@ -20,12 +20,12 @@ def touch_point(hor, ver)
 end
 
 
-def scroll_down
+def scroll_down(start_y:500, end_y:200, duration:1)
   selenium_driver = @driver.driver
   f1 = selenium_driver.action.add_pointer_input(:touch, 'finger1')
-  f1.create_pointer_move(duration: 0, x: 200, y: 500, origin: ::Selenium::WebDriver::Interactions::PointerMove::VIEWPORT)
+  f1.create_pointer_move(duration: 0, x: 200, y: start_y, origin: ::Selenium::WebDriver::Interactions::PointerMove::VIEWPORT)
   f1.create_pointer_down(:left)
-  f1.create_pointer_move(duration: 1, x: 200, y: 200, origin: ::Selenium::WebDriver::Interactions::PointerMove::VIEWPORT)
+  f1.create_pointer_move(duration: duration, x: 200, y: end_y, origin: ::Selenium::WebDriver::Interactions::PointerMove::VIEWPORT)
   f1.create_pointer_up(:left)
   selenium_driver.perform_actions [f1]
 end
