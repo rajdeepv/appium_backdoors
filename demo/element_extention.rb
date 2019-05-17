@@ -8,9 +8,18 @@ id = @driver.find_element({id: 'seekBar'}).ref
 @driver.execute_script("mobile: backdoor", {target: "element", elementId: id, methods: [{name: "getProgress"}]})
 
 
-message_element_ref = @driver.find_element({id: 'message'}).ref
-require 'pry'; binding.pry
-color = @driver.execute_script("mobile: backdoor", {target: "element", elementId: message_element_ref, methods: [{name: "getCurrentTextColor"}]})
+element = @driver.find_element({id: 'message'})
+
+color = @driver.execute_script("mobile: backdoor",
+                               {
+                                   target: "element",
+                                   elementId: element.ref,
+                                   methods: [
+                                       {name: "getCurrentTextColor"}
+                                   ]
+                               })
+
+
 puts "%x" % color
 
 

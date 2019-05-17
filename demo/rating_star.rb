@@ -21,7 +21,7 @@ require 'pry'; binding.pry
                                [
                                    {
                                        name: "setRating",
-                                       args: [{value: "0.5", type: 'float'}]
+                                       args: [{type: 'float', value: "4.5"}]
                                    }
                                ]
                        })
