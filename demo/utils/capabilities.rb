@@ -17,3 +17,19 @@ def android_caps_espresso
       forceEspressoRebuild: true,
   }
 end
+
+def android_uia_caps
+  {
+      platformName: 'Android',
+      deviceName: connected_devices.first,
+      app: 'app-debug.apk',
+      appWaitActivity: '*',
+      automationName: 'uiautomator2',
+      noSign: true,
+      newCommandTimeout: 0,
+      skipUnlock: true,
+      noReset: true,
+      fullReset: false,
+  }
+
+end
