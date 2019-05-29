@@ -1,7 +1,15 @@
 def uninstall_apps
-  p `adb uninstall com.hfad.messanger`
-  p `adb uninstall io.appium.espressoserver.test`
-  p `adb uninstall io.appium.android.apis`
+  `adb uninstall com.hfad.messanger`
+  `adb uninstall io.appium.espressoserver.test`
+  `adb uninstall io.appium.android.apis`
+end
+
+def silenced
+  stderr = STDERR
+  STDERR.reopen('/dev/null', 'w')
+  yield
+ensure
+  $stderr = stderr
 end
 
 

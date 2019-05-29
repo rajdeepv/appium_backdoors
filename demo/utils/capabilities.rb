@@ -13,7 +13,7 @@ def android_caps_espresso
       automationName: 'espresso',
       newCommandTimeout: 0,
       skipUnlock: true,
-      fullReset: false,
+      fullReset: true,
       forceEspressoRebuild: true,
   }
 end

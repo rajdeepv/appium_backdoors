@@ -1,6 +1,6 @@
 require_relative 'utils/env'
 
-@driver = Appium::Driver.new(caps: android_caps_espresso)
+@driver = Appium::Driver.new({caps: android_caps_espresso}, false)
 @driver.start_driver
 
 e = @driver.find_element({id: 'seekBar'})

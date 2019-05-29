@@ -1,6 +1,6 @@
 require_relative 'utils/env'
 
-@driver = Appium::Driver.new(caps: android_caps_espresso.merge(app: 'apidemo.apk'))
+@driver = Appium::Driver.new({caps: android_caps_espresso.merge(app: 'apidemo.apk')}, false)
 @driver.start_driver
 
 
