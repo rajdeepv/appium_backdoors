@@ -5,11 +5,11 @@ def uninstall_apps
 end
 
 def silenced
-  stderr = STDERR
+  stderr = $stderr.clone
   STDERR.reopen('/dev/null', 'w')
   yield
 ensure
-  $stderr = stderr
+  STDERR.reopen(stderr)
 end
 
 

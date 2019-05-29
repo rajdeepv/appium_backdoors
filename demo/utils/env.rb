@@ -7,4 +7,5 @@ require_relative 'monkey_patch'
 silenced do
   uninstall_apps
 end
+
 `adb shell settings put system pointer_location 1`

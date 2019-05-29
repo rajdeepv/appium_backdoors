@@ -9,11 +9,11 @@ def android_caps_espresso
       platformName: 'Android',
       deviceName: connected_devices.first,
       app: 'app-debug.apk',
-      appWaitActivity: '*',
+      # appWaitActivity: '*',
       automationName: 'espresso',
       newCommandTimeout: 0,
       skipUnlock: true,
-      fullReset: true,
+      fullReset: false,
       forceEspressoRebuild: true,
   }
 end
