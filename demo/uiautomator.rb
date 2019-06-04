@@ -5,4 +5,7 @@ require_relative 'utils/env'
 
 require 'pry'; binding.pry
 
-@driver.execute_script("mobile:uiautomator", {strategy: 'textContains', locator: 'Access', index: 1, action: 'getVisibleBounds'})
+@driver.execute_script("mobile:uiautomator", {strategy: 'textContains',
+                                              locator: 'Access',
+                                              index: 1,
+                                              action: 'getVisibleBounds'})
