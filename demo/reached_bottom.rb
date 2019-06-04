@@ -24,3 +24,7 @@ p "****** ********************************** ********"
 
 
 require 'pry'; binding.pry
+
+while @driver.execute_script("mobile: backdoor", backdoor_can_scroll) do
+  scroll_down
+end
