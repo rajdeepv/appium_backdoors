@@ -4,12 +4,10 @@ require_relative 'utils/env'
 
 @driver.start_driver
 
-element = @driver.find_element({id: 'message'})
-
 color = @driver.execute_script("mobile: backdoor",
                                {
                                    target: "element",
-                                   elementId: element.ref,
+                                   elementId: @driver.find_element({id: 'message'}).ref,
                                    methods: [
                                        {name: "getCurrentTextColor"}
                                    ]
