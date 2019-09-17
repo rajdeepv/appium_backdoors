@@ -23,6 +23,7 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    rb-readline (0.5.5)
     rubyzip (1.2.1)
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
@@ -38,6 +39,7 @@ PLATFORMS
 DEPENDENCIES
   appium_lib (= 9.16.0)
   pry
+  rb-readline
 
 BUNDLED WITH
-   1.16.2
+   1.17.1

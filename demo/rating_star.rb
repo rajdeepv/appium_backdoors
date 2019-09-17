@@ -4,13 +4,13 @@ require_relative 'utils/env'
 @driver.start_driver
 
 @driver.find_element(xpath_by_text("Views")).click
-scroll_down(start_y: 2000, end_y: 100, duration: 0.6)
+scroll_down(start_y: 1000, end_y: 100, duration: 0.6)
 sleep 1
 
 
 @driver.find_element(xpath_by_text("Rating Bar")).click
 
-e = @driver.find_element(id: 'ratingbar1')
+e = @driver.find_element(id: 'ratingbar2')
 require 'pry'; binding.pry
 
 @driver.execute_script("mobile: backdoor",
