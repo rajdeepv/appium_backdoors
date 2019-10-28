@@ -21,3 +21,4 @@ require 'pry'; binding.pry
 puts "%x" % color
 
 
+@driver.find_element({id: 'message'}).backdoor([{name: "getCurrentTextColor"}])
