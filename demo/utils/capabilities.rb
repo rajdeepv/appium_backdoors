@@ -4,11 +4,12 @@ def connected_devices
   lines[start_index..-1].collect {|l| l.split("\t").first}
 end
 
+
 def android_caps_espresso
   {
       platformName: 'Android',
       deviceName: connected_devices.first,
-      app: 'app-debug.apk',
+      app: File.join(File.dirname(__FILE__), '../../app-debug.apk/'),
       # appWaitActivity: '*',
       automationName: 'espresso',
       newCommandTimeout: 0,
