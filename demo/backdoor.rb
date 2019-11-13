@@ -45,7 +45,7 @@ method3 = {
         ]
 }
 
-
+require 'pry'; binding.pry
 @driver.execute_script("mobile: backdoor", method1)
 @driver.execute_script("mobile: backdoor", method2)
 @driver.execute_script("mobile: backdoor", method3)
