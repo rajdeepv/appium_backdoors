@@ -1,6 +1,6 @@
 require_relative 'utils/env'
 
-@driver = Appium::Driver.new(caps: android_caps_espresso.merge(app: 'apidemo.apk'))
+@driver = Appium::Driver.new(caps: android_caps_espresso(app: 'apidemo.apk'))
 @driver.start_driver
 
 def scroll_to_button(text)

@@ -5,11 +5,11 @@ def connected_devices
 end
 
 
-def android_caps_espresso
+def android_caps_espresso(app: 'app-debug.apk/')
   {
       platformName: 'Android',
       deviceName: connected_devices.first,
-      app: File.join(File.dirname(__FILE__), '../../app-debug.apk/'),
+      app: File.join(File.dirname(__FILE__), '../../'+ app),
       # appWaitActivity: '*',
       automationName: 'espresso',
       newCommandTimeout: 0,
