@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-node --inspect-brk node_modules/.bin/appium
+node --inspect node_modules/.bin/appium
