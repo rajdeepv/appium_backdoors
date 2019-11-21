@@ -4,7 +4,7 @@ require_relative 'utils/env'
 @driver.start_driver
 
 @driver.find_element(xpath_by_text("Views")).click
-scroll_down(start_y: 1000, end_y: 100, duration: 0.6)
+scroll_down(start_y: 2000, end_y: 500, duration: 0.6)
 sleep 1
 
 
