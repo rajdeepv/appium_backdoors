@@ -4,7 +4,11 @@ require_relative 'utils/env'
 @driver.start_driver
 
 @driver.find_element(xpath_by_text("Views")).click
-scroll_down(start_y: 2000, end_y: 500, duration: 0.6)
+
+until @driver.find_elements(xpath_by_text("Rating Bar")).any?
+  scroll_down
+end
+
 sleep 1
 
 

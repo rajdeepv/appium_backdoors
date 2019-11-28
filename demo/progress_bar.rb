@@ -4,7 +4,10 @@ require_relative 'utils/env'
 @driver.start_driver
 
 @driver.find_element(xpath_by_text("Views")).click
-scroll_down(start_y:2000, end_y:100, duration:0.5)
+
+until @driver.find_elements(xpath_by_text("Progress Bar")).any?
+  scroll_down
+end
 
 @driver.find_element(xpath_by_text("Progress Bar")).click
 @driver.find_element(xpath_by_text("1. Incremental")).click
