@@ -27,6 +27,10 @@ def touch_point(hor, ver)
   selenium_driver.perform_actions [f1]
 end
 
+def adb_touch_point(x, y)
+  `adb shell input tap #{x} #{y}`
+end
+
 
 def scroll_down(start_y:500, end_y:200, duration:1)
   selenium_driver = @driver.driver
