@@ -3,24 +3,20 @@ require_relative 'utils/env'
 @driver = Appium::Driver.new({caps: android_caps_espresso(app: 'apidemo.apk')}, false)
 @driver.start_driver
 
+scroll_to(xpath_by_text("Views"))
 @driver.find_element(xpath_by_text("Views")).click
 
-until @driver.find_elements(xpath_by_text("Rating Bar")).any?
-  scroll_down
-end
-
-sleep 1
-
-
+scroll_to(xpath_by_text("Rating Bar"))
 @driver.find_element(xpath_by_text("Rating Bar")).click
 
-e = @driver.find_element(id: 'ratingbar2')
+sleep 1
+element = @driver.find_element(id: 'ratingbar2')
 require 'pry'; binding.pry
 
 @driver.execute_script("mobile: backdoor",
                        {
                            target: "element",
-                           elementId: e.ref,
+                           elementId: element.ref,
                            methods:
                                [
                                    {
@@ -29,3 +25,11 @@ require 'pry'; binding.pry
                                    }
                                ]
                        })
+
+
+element.backdoor([
+                     {
+                         name: "setRating",
+                         args: [{type: 'float', value: "4.5"}]
+                     }
+                 ])

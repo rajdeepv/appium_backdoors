@@ -28,9 +28,7 @@ def tap_subtext_in_text(subtext, locator)
   adb_touch_point(x, y)
 end
 
-until @driver.find_elements(xpath_by_text("Text")).any?
-  scroll_down
-end
+scroll_to(xpath_by_text("Text"))
 
 @driver.find_element(xpath_by_text("Text")).click
 @driver.find_element(xpath_by_text("Linkify")).click

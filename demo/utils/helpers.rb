@@ -31,6 +31,12 @@ def adb_touch_point(x, y)
   `adb shell input tap #{x} #{y}`
 end
 
+def scroll_to(locator)
+  until @driver.find_elements(locator).any?
+    scroll_down
+  end
+  sleep 1
+end
 
 def scroll_down(start_y:500, end_y:200, duration:1)
   selenium_driver = @driver.driver
