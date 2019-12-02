@@ -5,7 +5,7 @@ require_relative 'utils/env'
 
 
 def tap_subtext_in_text(subtext, locator)
-  text_view = @driver.find_element({id: locator})
+  text_view = @driver.find_element(locator)
   full_text = text_view.text
   link_index = full_text.index(subtext) + subtext.size / 2
   top_x = text_view.location.x
@@ -28,7 +28,12 @@ def tap_subtext_in_text(subtext, locator)
   adb_touch_point(x, y)
 end
 
+until @driver.find_elements(xpath_by_text("Text")).any?
+  scroll_down
+end
+
 @driver.find_element(xpath_by_text("Text")).click
 @driver.find_element(xpath_by_text("Linkify")).click
+
 require 'pry'; binding.pry
-tap_subtext_in_text('415', 'text1')
+tap_subtext_in_text('415', {id: 'text1'})
