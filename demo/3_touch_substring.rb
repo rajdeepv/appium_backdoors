@@ -10,18 +10,20 @@ def tap_subtext_in_text(subtext, locator)
   link_index = full_text.index(subtext) + subtext.size / 2
   top_x = text_view.location.x
   top_y = text_view.location.y
-  ref = text_view.ref
 
   left_padding = text_view.backdoor([{name: "getCompoundPaddingLeft"}])
 
   # x coordinate of word (link)
-  hor = text_view.backdoor([{name: "getLayout"}, {name: "getPrimaryHorizontal", args: [{type: "int", value: link_index}]}])
+  hor = text_view.backdoor([{name: "getLayout"},
+                            {name: "getPrimaryHorizontal", args: [{type: "int", value: link_index}]}])
 
   # line number at which word(link) exists
-  line = text_view.backdoor([{name: "getLayout"}, {name: "getLineForOffset", args: [{type: "int", value: link_index}]}])
+  line = text_view.backdoor([{name: "getLayout"},
+                             {name: "getLineForOffset", args: [{type: "int", value: link_index}]}])
 
   # y coordinate of word (link)
-  ver = text_view.backdoor([{name: "getLayout"}, {name: "getLineBaseline", args: [{type: "int", value: line}]}])
+  ver = text_view.backdoor([{name: "getLayout"},
+                            {name: "getLineBaseline", args: [{type: "int", value: line}]}])
 
   x = hor + top_x + left_padding
   y = ver + top_y

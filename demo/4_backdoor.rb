@@ -8,7 +8,7 @@ method1 = {
         [
             {
                 name: "raiseToast",
-                args: [{value: "Love Appium", type: 'java.lang.String'}]
+                args: [{value: "Welcome to Heisenbug \n This message was sent by automation code to app under test", type: 'java.lang.String'}]
             }
         ]
 }

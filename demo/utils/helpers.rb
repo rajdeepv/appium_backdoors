@@ -38,7 +38,7 @@ def scroll_to(locator)
   sleep 1
 end
 
-def scroll_down(start_y:500, end_y:200, duration:1)
+def scroll_down(start_y:900, end_y:300, duration:1)
   selenium_driver = @driver.driver
   f1 = selenium_driver.action.add_pointer_input(:touch, 'finger1')
   f1.create_pointer_move(duration: 0, x: 200, y: start_y, origin: ::Selenium::WebDriver::Interactions::PointerMove::VIEWPORT)
