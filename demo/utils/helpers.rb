@@ -28,7 +28,7 @@ def touch_point(hor, ver)
 end
 
 def adb_touch_point(x, y)
-  `adb shell input tap #{x} #{y}`
+  `adb shell input  touchscreen swipe #{x} #{y} #{x} #{y} 2000`
 end
 
 def scroll_to(locator)
