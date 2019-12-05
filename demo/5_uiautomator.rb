@@ -6,6 +6,6 @@ require_relative 'utils/env'
 require 'pry'; binding.pry
 
 @driver.execute_script("mobile:uiautomator", {strategy: 'textContains',
-                                              locator: 'Battery',
+                                              locator: 'App',
                                               index: 0,
                                               action: 'click'})

@@ -30,6 +30,6 @@ require 'pry'; binding.pry
 element.backdoor([
                      {
                          name: "setRating",
-                         args: [{type: 'float', value: "4.5"}]
+                         args: [{type: 'float', value: "1.5"}]
                      }
                  ])
