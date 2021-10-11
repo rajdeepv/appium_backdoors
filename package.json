@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "appium": "v1.21.0"
+    "appium": "beta"
   },
   "scripts": {
     "start": "./npm-start.sh"

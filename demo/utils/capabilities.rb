@@ -15,7 +15,8 @@ def android_caps_espresso(app: 'app-debug.apk/')
       newCommandTimeout: 0,
       skipUnlock: true,
       fullReset: false,
-      forceEspressoRebuild: false,
+      forceEspressoRebuild: true,
+      showGradleLog: true
   }
 end
 

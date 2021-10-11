@@ -5,5 +5,26 @@ require_relative 'utils/env'
 
 element = @driver.find_element(id: 'bold')
 element.click
-sleep 10
+
+backdoor_item_count = {
+  target: "element",
+  elementId: element.ref,
+  methods: [
+    {name: "getTypeface"},
+    {name: "isBold"}
+  ]
+}
+
+
+b2 = {
+  target: "element",
+  elementId: element.ref,
+  methods: [
+    {name: "getTypeface"},
+  ]
+}
+
+require 'pry'; binding.pry
+p @driver.execute_script("mobile: backdoor", backdoor_item_count)
+
 @driver.quit_driver

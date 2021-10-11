@@ -14,10 +14,9 @@ list_view = @driver.find_element({id: 'android:id/list'})
 
 backdoor_item_count = {
     target: "element",
-    elementId: list_view.ref,
+    elementId: e.ref,
     methods: [
-        {name: "getAdapter"},
-        {name: "getCount"}
+        {name: "getTypeface"},
     ]
 }
 

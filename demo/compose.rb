@@ -11,12 +11,12 @@ def android_compose_caps(app: 'compose_playground.apk/')
     fullReset: false,
     forceEspressoRebuild: true,
     showGradleLog: true,
-    espressoBuildConfig: '{"additionalAndroidTestDependencies": ["androidx.lifecycle:lifecycle-extensions:2.2.0", "androidx.activity:activity:1.3.1", "androidx.fragment:fragment:1.3.4"]}'
+    espressoBuildConfig: '{"additionalAndroidTestDependencies": ["androidx.lifecycle:lifecycle-extensions:2.2.0", "androidx.activity:activity:1.3.1",  "androidx.fragment:fragment:1.2.0"]}'
   }
 end
 
-@driver = Appium::Driver.new({ caps: android_compose_caps }, false)
-
-@driver.start_driver
+@@driver = Appium::Driver.new({ caps: android_compose_caps }, false)
+@@driver.start_driver
+@@driver.update_settings({'driver' => 'compose'})
 
 binding.pry
